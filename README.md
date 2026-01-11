@@ -18,7 +18,7 @@ The model utilizes a dataset of **37 features** derived from demographic data, s
 ### **1. Preprocessing & Pipeline**
 To ensure robustness and prevent **data leakage**, all transformations are handled within a scikit-learn **Pipeline**. The preprocessing steps include:
 *   **StandardScaler:** Normalises features to a unit variance.
-*   **SelectKBest:** Selects the top features based on mutual information.
+*  **RFE:** Recursively removes less important features based on the model’s performance until the desired number of features is selected.
 *   **PCA:** Reduces dimensionality to its primary principal components.
 *   **SMOTE:** Applied to the training set only to balance the target classes (Dropout and Graduate).
 
